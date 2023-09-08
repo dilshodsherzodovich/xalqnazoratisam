@@ -47,6 +47,9 @@ export default {
         slideInRight: "slideInRight 2s linear ",
         slideInLeft: "slideInLeft 1s linear",
       },
+      screens: {
+        xl: "1200px",
+      },
 
       colors: {
         secondary: "#525260",

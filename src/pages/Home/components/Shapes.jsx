@@ -11,7 +11,7 @@ function Shapes() {
       />
       <AnimatedShape
         shape={circle2}
-        className="absolute top-[120px] lg:right-[100px] opacity-60"
+        className="absolute top-[120px] lg:right-[100px] opacity-60 hidden lg:block"
       />
     </div>
   );

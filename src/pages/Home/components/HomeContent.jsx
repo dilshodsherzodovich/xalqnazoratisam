@@ -10,19 +10,19 @@ function HomeContent() {
   return (
     <Container>
       <div className="grid grid-cols-2 place-items-top gap-3">
-        <div className="intro-text col-span-1">
-          <div className="mt-[60px]">
-            <p className="text-[40px] md:text-[50px] lg:text-[70px] leading-[1.4] font-bold mb-[40px] tracking-[-0.45] text-[#313b6c]  mx-auto">
+        <div className="intro-text col-span-2 lg:col-span-1">
+          <div className="lg:mt-[60px] text-center lg:text-start">
+            <p className="text-[30px] md:text-[50px] 2xl:text-[70px] leading-[1.4] font-bold mb-[40px] tracking-[-0.45] text-[#313b6c] mx-auto">
               Samarqand viloyat xalq nazorati
             </p>
-            <p className="text-[18px] w-[70%] mb-[40px]">
+            <p className="text-[18px] w-[70%] mb-[40px] mx-auto lg:mx-0">
               Aholi va shahar xizmatlarining o`rtasida samarali hamkorlik qilish
               uchun interaktiv servis
             </p>
             <AuthBtn />
           </div>
         </div>
-        <div className="col-span-1">
+        <div className="col-span-2 lg:col-span-1">
           <div className="banner-thumbnail relative">
             <div className="animate__animated zoomIn animate-zoomIn z-[-1]">
               <div className="large-thumb">

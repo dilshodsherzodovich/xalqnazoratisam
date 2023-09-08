@@ -47,10 +47,7 @@ export default {
         slideInRight: "slideInRight 2s linear ",
         slideInLeft: "slideInLeft 1s linear",
       },
-      screens: {
-        xl: "1100px",
-        "2xl": "1320px",
-      },
+
       colors: {
         secondary: "#525260",
         blueLink: "#5956e9",

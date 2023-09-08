@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  padding: 50px 0;
+  z-index: 5;
+}
+
+.header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: #fff;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  animation: headerSlideDown 0.8s ease forwards;
+}
+
+@keyframes headerSlideDown {
+  0% {
+    margin-top: -20px;
+    opacity: 0;
+  }
+  30% {
+    margin-top: -10px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Add more styling for your header elements */

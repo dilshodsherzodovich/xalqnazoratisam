@@ -23,7 +23,7 @@ function Footer() {
             <Link to={"#"}>Xabarni qanday qoldirish mumkin?</Link>
             <Link to={"#"}>Bu qanday ishlaydi?</Link>
           </div>
-          <div className="footer-nav-item flex flex-col gap-2">
+          <div className="footer-nav-item flex flex-col gap-3">
             <p className="item-header text-[#313b6c] font-[600]">
               Ijtimoiy tarmoqlar
             </p>

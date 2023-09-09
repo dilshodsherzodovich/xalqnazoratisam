@@ -43,15 +43,16 @@ export default {
         },
       },
       animation: {
-        zoomIn: "zoomIn 2s linear",
-        slideInRight: "slideInRight 2s linear ",
-        slideInLeft: "slideInLeft 1s linear",
+        zoomIn: "zoomIn 1s linear",
+        slideInRight: "slideInRight 0.5s linear ",
+        slideInLeft: "slideInLeft 0.5s linear",
       },
       screens: {
         xl: "1200px",
       },
 
       colors: {
+        primary: "#5956e9",
         secondary: "#525260",
         blueLink: "#5956e9",
       },

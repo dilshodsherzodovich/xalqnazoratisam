@@ -7,7 +7,7 @@ function Shapes() {
     <div className="shapes">
       <AnimatedShape
         shape={circle}
-        className="absolute top-0  left-0 opacity-60"
+        className="absolute top-0  left-0 opacity-60 hidden lg:block"
       />
       <AnimatedShape
         shape={circle2}

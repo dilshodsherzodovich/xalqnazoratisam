@@ -1,0 +1,477 @@
+{
+  "allProblems": [
+    {
+      "mainCategoryId": 0,
+      "problems": [
+        {
+          "id": 1,
+          "categoryTitle": "Suv masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Sovuq suv yo'q"
+            },
+            {
+              "id": 2,
+              "title": "Issiq suv yo'q"
+            },
+            {
+              "id": 3,
+              "title": "Sovuq suv past bosimda"
+            },
+            {
+              "id": 4,
+              "title": "Issiq suv past bosimda"
+            },
+            {
+              "id": 5,
+              "title": "Suv quvuri yorilgan"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "categoryTitle": "Elektr energetika",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Elktron hisoblagich bilan muammolar bor"
+            },
+            {
+              "id": 2,
+              "title": "Shaxmat tartibida elektr energiyasining o'chishi"
+            },
+            {
+              "id": 3,
+              "title": "Elektr tarmoq/shit uskunasining shikastlanishi"
+            },
+            {
+              "id": 4,
+              "title": "Elektr energiya past kuchlanishda"
+            },
+            {
+              "id": 5,
+              "title": "Elektr energiya yuqori kuchlanishda"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "categoryTitle": "Gaz masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "  Gaz bosimini pastligi"
+            },
+            {
+              "id": 2,
+              "title": "  Gaz bosimi yuqori"
+            },
+            {
+              "id": 3,
+              "title": "Is gazi chiqishi (xonadonda)"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "categoryTitle": "Ko'p xonali uy",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Yerto'la suv bosib qolgan"
+            },
+            {
+              "id": 2,
+              "title": "Uy devorlari shikastlanishi"
+            },
+            {
+              "id": 3,
+              "title": "Lift ishlamayapti"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "categoryTitle": "Gaz masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "  Gaz bosimini pastligi"
+            },
+            {
+              "id": 2,
+              "title": "  Gaz bosimi yuqori"
+            },
+            {
+              "id": 3,
+              "title": "Is gazi chiqishi (xonadonda)"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "categoryTitle": "Ko'p xonali uy",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Yerto'la suv bosib qolgan"
+            },
+            {
+              "id": 2,
+              "title": "Uy devorlari shikastlanishi"
+            },
+            {
+              "id": 3,
+              "title": "Lift ishlamayapti"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mainCategoryId": 1,
+      "problems": [
+        {
+          "id": 1,
+          "categoryTitle": "Tratuar",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Sovuq suv yo'q"
+            },
+            {
+              "id": 2,
+              "title": "Issiq suv yo'q"
+            },
+            {
+              "id": 3,
+              "title": "Sovuq suv past bosimda"
+            },
+            {
+              "id": 4,
+              "title": "Issiq suv past bosimda"
+            },
+            {
+              "id": 5,
+              "title": "Suv quvuri yorilgan"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "categoryTitle": "Ta'mirtalab asfalt",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Elktron hisoblagich bilan muammolar bor"
+            },
+            {
+              "id": 2,
+              "title": "Shaxmat tartibida elektr energiyasining o'chishi"
+            },
+            {
+              "id": 3,
+              "title": "Elektr tarmoq/shit uskunasining shikastlanishi"
+            },
+            {
+              "id": 4,
+              "title": "Elektr energiya past kuchlanishda"
+            },
+            {
+              "id": 5,
+              "title": "Elektr energiya yuqori kuchlanishda"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "categoryTitle": "Piyodalar o'tish joylari",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "  Gaz bosimini pastligi"
+            },
+            {
+              "id": 2,
+              "title": "  Gaz bosimi yuqori"
+            },
+            {
+              "id": 3,
+              "title": "Is gazi chiqishi (xonadonda)"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "categoryTitle": "Yo'l",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Yerto'la suv bosib qolgan"
+            },
+            {
+              "id": 2,
+              "title": "Uy devorlari shikastlanishi"
+            },
+            {
+              "id": 3,
+              "title": "Lift ishlamayapti"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mainCategoryId": 2,
+      "problems": [
+        {
+          "id": 1,
+          "categoryTitle": "Suv masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Sovuq suv yo'q"
+            },
+            {
+              "id": 2,
+              "title": "Issiq suv yo'q"
+            },
+            {
+              "id": 3,
+              "title": "Sovuq suv past bosimda"
+            },
+            {
+              "id": 4,
+              "title": "Issiq suv past bosimda"
+            },
+            {
+              "id": 5,
+              "title": "Suv quvuri yorilgan"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "categoryTitle": "Elektr energetika",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Elktron hisoblagich bilan muammolar bor"
+            },
+            {
+              "id": 2,
+              "title": "Shaxmat tartibida elektr energiyasining o'chishi"
+            },
+            {
+              "id": 3,
+              "title": "Elektr tarmoq/shit uskunasining shikastlanishi"
+            },
+            {
+              "id": 4,
+              "title": "Elektr energiya past kuchlanishda"
+            },
+            {
+              "id": 5,
+              "title": "Elektr energiya yuqori kuchlanishda"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "categoryTitle": "Gaz masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "  Gaz bosimini pastligi"
+            },
+            {
+              "id": 2,
+              "title": "  Gaz bosimi yuqori"
+            },
+            {
+              "id": 3,
+              "title": "Is gazi chiqishi (xonadonda)"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "categoryTitle": "Ko'p xonali uy",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Yerto'la suv bosib qolgan"
+            },
+            {
+              "id": 2,
+              "title": "Uy devorlari shikastlanishi"
+            },
+            {
+              "id": 3,
+              "title": "Lift ishlamayapti"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "categoryTitle": "Suv masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Sovuq suv yo'q"
+            },
+            {
+              "id": 2,
+              "title": "Issiq suv yo'q"
+            },
+            {
+              "id": 3,
+              "title": "Sovuq suv past bosimda"
+            },
+            {
+              "id": 4,
+              "title": "Issiq suv past bosimda"
+            },
+            {
+              "id": 5,
+              "title": "Suv quvuri yorilgan"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mainCategoryId": 3,
+      "problems": [
+        {
+          "id": 1,
+          "categoryTitle": "Suv masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Sovuq suv yo'q"
+            },
+            {
+              "id": 2,
+              "title": "Issiq suv yo'q"
+            },
+            {
+              "id": 3,
+              "title": "Sovuq suv past bosimda"
+            },
+            {
+              "id": 4,
+              "title": "Issiq suv past bosimda"
+            },
+            {
+              "id": 5,
+              "title": "Suv quvuri yorilgan"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "categoryTitle": "Elektr energetika",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Elktron hisoblagich bilan muammolar bor"
+            },
+            {
+              "id": 2,
+              "title": "Shaxmat tartibida elektr energiyasining o'chishi"
+            },
+            {
+              "id": 3,
+              "title": "Elektr tarmoq/shit uskunasining shikastlanishi"
+            },
+            {
+              "id": 4,
+              "title": "Elektr energiya past kuchlanishda"
+            },
+            {
+              "id": 5,
+              "title": "Elektr energiya yuqori kuchlanishda"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "categoryTitle": "Gaz masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "  Gaz bosimini pastligi"
+            },
+            {
+              "id": 2,
+              "title": "  Gaz bosimi yuqori"
+            },
+            {
+              "id": 3,
+              "title": "Is gazi chiqishi (xonadonda)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "mainCategoryId": 4,
+      "problems": [
+        {
+          "id": 1,
+          "categoryTitle": "Suv masalasi",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Sovuq suv yo'q"
+            },
+            {
+              "id": 2,
+              "title": "Issiq suv yo'q"
+            },
+            {
+              "id": 3,
+              "title": "Sovuq suv past bosimda"
+            },
+            {
+              "id": 4,
+              "title": "Issiq suv past bosimda"
+            },
+            {
+              "id": 5,
+              "title": "Suv quvuri yorilgan"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "categoryTitle": "Elektr energetika",
+          "miniCategories": [
+            {
+              "id": 1,
+              "title": "Elktron hisoblagich bilan muammolar bor"
+            },
+            {
+              "id": 2,
+              "title": "Shaxmat tartibida elektr energiyasining o'chishi"
+            },
+            {
+              "id": 3,
+              "title": "Elektr tarmoq/shit uskunasining shikastlanishi"
+            },
+            {
+              "id": 4,
+              "title": "Elektr energiya past kuchlanishda"
+            },
+            {
+              "id": 5,
+              "title": "Elektr energiya yuqori kuchlanishda"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

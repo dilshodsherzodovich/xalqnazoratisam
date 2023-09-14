@@ -1,10 +1,10 @@
 import Container from "@layouts/Container";
-import AuthBtn from "../../../layouts/mainLayout/components/Header/components/AuthBtn";
 
 //import media files
 import windowPic from "@assets/images/window.png";
 import laptop from "@assets/images/laptop-poses.png";
 import chat from "@assets/images/chat-group.png";
+import PrimaryBtn from "../../../components/PrimaryBtn";
 
 function HomeContent() {
   return (
@@ -19,7 +19,7 @@ function HomeContent() {
               Aholi va shahar xizmatlarining o`rtasida samarali hamkorlik qilish
               uchun interaktiv servis
             </p>
-            <AuthBtn />
+            <PrimaryBtn text={"Ro'yxatdan o'tish"} />
           </div>
         </div>
         <div className="col-span-2 lg:col-span-1">

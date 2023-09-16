@@ -25,6 +25,8 @@ export const createProblem = createAsyncThunk(
       url: "/muammolar/createproblem/",
       headers: {
         "Content-Type": "multipart/form-data",
+        Authorization:
+          "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk0ODY0MTA1LCJpYXQiOjE2OTQ4NjM4MDUsImp0aSI6IjcxNjA4MmZjZDdhMjRmY2I4ZjQ3MWE2MmMyNzQ1MmVlIiwidXNlcl9pZCI6MX0.Gve-9h7iguAW6dqXW722Su-Mx9_JsNXYF5C_t8zIRFA",
       },
     });
   }

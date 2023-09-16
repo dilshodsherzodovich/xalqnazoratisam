@@ -1,6 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 export const handleHttpError = (error) => {
+  console.log(error);
   let errMeg;
   if (axios.isCancel(error)) {
     errMeg = `Request canceled: ${error.message}`;
@@ -8,6 +9,8 @@ export const handleHttpError = (error) => {
     const { status } = error.response;
     if (status >= 500) {
       errMeg = "Server error";
+    } else if (error.response.data.detail) {
+      errMeg = error.response.data.detail;
     } else if (status === 403) {
       errMeg = "Taqiqlangan";
     } else {

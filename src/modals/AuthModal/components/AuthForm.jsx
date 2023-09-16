@@ -1,24 +1,45 @@
 import { useEffect, useState } from "react";
 import TelMask from "../../../components/TelMask";
 import PrimaryBtn from "@components/PrimaryBtn";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../../redux/slices/authLogin.slice";
+import { useCookies } from "react-cookie";
 
 function AuthForm({ closeModal }) {
   const [showPassword, setShowPassword] = useState(false);
   const [activeAuth, setActiveAuth] = useState("login");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const { userRes, loading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const [cookies, setCookie] = useCookies([]);
 
   const handleSubmit = (e) => {
     const formData = new FormData(e.target);
     const data = {
-      username: formData.get("username").split(" ").join(""),
+      phone: formData.get("phone").split(" ").join(""),
       password: formData.get("password"),
     };
+
     dispatch(loginUser(data));
   };
+
+  useEffect(() => {
+    if (userRes.access) {
+      setCookie("access", userRes.access, {
+        path: "/",
+        secure: "Dilshod",
+        maxAge: 86400,
+      });
+      setCookie("refresh", userRes.refresh, {
+        path: "/",
+        secure: "Dilshod",
+        maxAge: 50 * 365 * 24 * 60 * 60,
+      });
+      closeModal();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userRes]);
 
   return (
     <div className="bg-white px-20 py-12 rounded-xl shadow-2xl w-[700px] relative">
@@ -55,8 +76,14 @@ function AuthForm({ closeModal }) {
         <PrimaryBtn
           className="mt-8 mb-4 inline-block"
           type="submit"
-          disabled={!phone || !password}
-          text={activeAuth === "login" ? "Kirish" : "Ro'yxatdan o'tish"}
+          disabled={!phone || !password || loading}
+          text={
+            loading
+              ? "Yuklanmoqda"
+              : activeAuth === "login"
+              ? "Kirish"
+              : "Ro'yxatdan o'tish"
+          }
         />
       </form>
 

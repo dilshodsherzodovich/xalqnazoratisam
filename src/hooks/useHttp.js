@@ -27,7 +27,7 @@ export const useHttp = () => {
         })
         .catch((error) => {
           handleHttpError(error);
-          return;
+          return {};
         });
     } catch (error) {
       console.log(error);

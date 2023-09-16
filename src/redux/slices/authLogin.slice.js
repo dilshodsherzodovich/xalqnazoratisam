@@ -12,7 +12,7 @@ export const loginUser = createAsyncThunk(
     const { request } = useHttp();
     return await request({
       method: "post",
-      url: "/api/login/",
+      url: "/api/token/",
       data,
       headers: {
         "Content-Type": "application/json",

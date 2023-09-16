@@ -9,7 +9,7 @@ function TelMask({ value = null, className = "", setValue }) {
       // eslint-disable-next-line no-nonoctal-decimal-escape
       mask="+\9\98 99 999 99 99"
       placeholder="+998 90 123 45 67"
-      name="username"
+      name="phone"
       required
       value={value}
       onChange={(e) => {

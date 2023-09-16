@@ -20,7 +20,7 @@ export default defineConfig({
       "@hooks": path.resolve(__dirname, "./src/hooks"),
     },
   },
-  optimizeDeps: {
-    exclude: ["js-big-decimal"],
-  },
+  // optimizeDeps: {
+  //   exclude: ["js-big-decimal"],
+  // },
 });

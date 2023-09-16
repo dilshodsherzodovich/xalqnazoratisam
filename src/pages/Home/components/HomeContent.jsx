@@ -1,5 +1,6 @@
 import Container from "@layouts/Container";
 import PrimaryBtn from "@components/PrimaryBtn";
+import overlayPic from "@assets/images/sam.png";
 
 //import media files
 import windowPic from "@assets/images/window.png";
@@ -35,7 +36,7 @@ function HomeContent() {
           </div>
         </div>
         <div className="col-span-2 lg:col-span-1">
-          <div className="banner-thumbnail relative">
+          {/* <div className="banner-thumbnail relative">
             <div className="animate__animated zoomIn animate-zoomIn z-[-1]">
               <div className="large-thumb">
                 <img
@@ -65,6 +66,9 @@ function HomeContent() {
                 </div>
               </li>
             </ul>
+          </div> */}
+          <div className="relative z-9 scale-150">
+            <img className="w-full " src={overlayPic} alt="" />
           </div>
         </div>
       </div>

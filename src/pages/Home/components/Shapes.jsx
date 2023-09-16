@@ -9,10 +9,6 @@ function Shapes() {
         shape={circle}
         className="absolute top-0  left-0 opacity-60 hidden lg:block"
       />
-      <AnimatedShape
-        shape={circle2}
-        className="absolute top-[120px] lg:right-[100px] opacity-60 hidden lg:block"
-      />
     </div>
   );
 }

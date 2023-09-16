@@ -1,12 +1,21 @@
 import Container from "@layouts/Container";
+import PrimaryBtn from "@components/PrimaryBtn";
 
 //import media files
 import windowPic from "@assets/images/window.png";
 import laptop from "@assets/images/laptop-poses.png";
 import chat from "@assets/images/chat-group.png";
-import PrimaryBtn from "../../../components/PrimaryBtn";
+
+import { useDispatch } from "react-redux";
+import { setIsAuthOpen } from "../../../redux/slices/modals.slice";
 
 function HomeContent() {
+  const dispacth = useDispatch();
+
+  const handleRegisterClick = () => {
+    dispacth(setIsAuthOpen(true));
+  };
+
   return (
     <Container>
       <div className="grid grid-cols-2 place-items-top gap-3">
@@ -19,7 +28,10 @@ function HomeContent() {
               Aholi va shahar xizmatlarining o`rtasida samarali hamkorlik qilish
               uchun interaktiv servis
             </p>
-            <PrimaryBtn text={"Ro'yxatdan o'tish"} />
+            <PrimaryBtn
+              onClick={handleRegisterClick}
+              text={"Ro'yxatdan o'tish"}
+            />
           </div>
         </div>
         <div className="col-span-2 lg:col-span-1">

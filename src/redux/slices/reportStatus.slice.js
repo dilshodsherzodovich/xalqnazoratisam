@@ -23,7 +23,6 @@ const statusSlice = createSlice({
   initialState,
   reducers: {
     gotToStep: (state, action) => {
-      console.log(state.step);
       if (+action.payload > state.step) {
         state.statuses[state.step].status = "done";
       } else if (

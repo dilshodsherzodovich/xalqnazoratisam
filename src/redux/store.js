@@ -4,6 +4,10 @@ import problemTypes from "./slices/problemTypes.slice";
 import reportStatus from "./slices/reportStatus.slice";
 import selectedProblem from "./slices/selectedProblem.slice";
 import problemImages from "./slices/problemImages.slice";
+import problemCreate from "./slices/problemCreate.slice";
+import regions from "./slices/regions.slice";
+import modals from "./slices/modals.slice";
+import auth from "./slices/authLogin.slice";
 
 /* eslint-disable  no-undef */
 
@@ -14,6 +18,10 @@ export const store = configureStore({
     reportStatus,
     selectedProblem,
     problemImages,
+    problemCreate,
+    regions,
+    modals,
+    auth,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
   devTools: process.env.NODE_ENV !== "production",

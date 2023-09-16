@@ -3,9 +3,11 @@ import classNames from "classnames";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { gotToStep } from "../../../../redux/slices/reportStatus.slice";
+import { clearImages } from "../../../../redux/slices/problemImages.slice";
 
 function ReportStatus() {
-  const { statuses } = useSelector((state) => state.reportStatus);
+  const { statuses, step } = useSelector((state) => state.reportStatus);
+
   const dispatch = useDispatch();
 
   const renderStatuses = (statuses) => {
@@ -33,6 +35,9 @@ function ReportStatus() {
             onClick={() => {
               if (item.status === "done") {
                 dispatch(gotToStep(index));
+              }
+              if (index === 0 && step !== 0) {
+                dispatch(clearImages());
               }
             }}
           >

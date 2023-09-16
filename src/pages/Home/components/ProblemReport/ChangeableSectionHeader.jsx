@@ -1,4 +1,5 @@
 import GoBackBtn from "../../../../components/Gobackbtn";
+import { clearImages } from "../../../../redux/slices/problemImages.slice";
 import { gotToStep } from "../../../../redux/slices/reportStatus.slice";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -14,6 +15,9 @@ function ChangeableSectionHeader({ backStep }) {
       <span
         onClick={() => {
           dispatch(gotToStep(backStep));
+          if (backStep === 0) {
+            dispatch(clearImages());
+          }
         }}
       >
         <GoBackBtn />

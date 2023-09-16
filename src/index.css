@@ -113,6 +113,18 @@ footer::after {
   background: #f8f9fa;
 }
 
+.ReactModal__Overlay {
+  z-index: 10;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #313b6c;
+  box-shadow: inset 0 0 50px 50px #f8f9fa;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

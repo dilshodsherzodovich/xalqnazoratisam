@@ -16,6 +16,11 @@ export default defineConfig({
       "@config": path.resolve(__dirname, "./src/config"),
       "@layouts": path.resolve(__dirname, "./src/layouts"),
       "@pages": path.resolve(__dirname, "./src/pages"),
+      "@utils": path.resolve(__dirname, "./src/utils"),
+      "@hooks": path.resolve(__dirname, "./src/hooks"),
     },
+  },
+  optimizeDeps: {
+    exclude: ["js-big-decimal"],
   },
 });

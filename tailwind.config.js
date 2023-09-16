@@ -55,6 +55,8 @@ export default {
         primary: "#5956e9",
         secondary: "#525260",
         blueLink: "#5956e9",
+        borderColor: "#b2b7d040",
+        grayBg: "#f8f9fa",
       },
     },
   },

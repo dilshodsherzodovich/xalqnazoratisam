@@ -14,7 +14,7 @@ function FileUploadInput({ name }) {
         onClick={() => {
           fileRef.current.click();
         }}
-        className="label-preview w-[120px] h-[120px] text-secondary flex items-center justify-center text-[22px] rounded-full border border-dashed border-secondary"
+        className="label-preview w-[70px] h-[70px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] text-secondary flex items-center justify-center text-[22px] rounded-full border border-dashed border-secondary"
       >
         {image ? (
           <img

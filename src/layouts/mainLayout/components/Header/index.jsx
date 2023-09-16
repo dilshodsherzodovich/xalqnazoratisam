@@ -4,10 +4,15 @@ import "./header.css";
 import Logo from "./components/Logo";
 import Navbar from "./components/Navbar";
 import Container from "@layouts/Container";
-import AuthBtn from "./components/AuthBtn";
+import AuthModal from "../../../../modals/AuthModal";
+import PrimaryBtn from "@components/PrimaryBtn";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsAuthOpen } from "../../../../redux/slices/modals.slice";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { isAuthOpen } = useSelector((state) => state.modals);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +30,10 @@ function Header() {
     };
   }, []);
 
+  const closeModal = () => {
+    dispatch(setIsAuthOpen(false));
+  };
+
   return (
     <header className={`header ${isScrolled ? "scrolled" : ""}`}>
       <Container>
@@ -32,7 +41,15 @@ function Header() {
           <Logo />
           <div className="flex items-center gap-5">
             <Navbar />
+            <PrimaryBtn
+              text="Kirish"
+              onClick={() => {
+                dispatch(setIsAuthOpen(true));
+              }}
+              className="px-12 py-[0.8rem]"
+            />
           </div>
+          <AuthModal isAuthOpen={isAuthOpen} closeModal={closeModal} />
         </div>
       </Container>
     </header>

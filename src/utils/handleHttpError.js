@@ -14,7 +14,7 @@ export const handleHttpError = (error) => {
     } else if (status === 403) {
       errMeg = "Taqiqlangan";
     } else {
-      errMeg = `Xatoli yuz berdi: ${error.status}`;
+      errMeg = `${error.message}`;
     }
   } else if (error.request) {
     if (error.request.status === 0) {

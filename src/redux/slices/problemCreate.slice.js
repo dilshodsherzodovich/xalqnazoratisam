@@ -3,10 +3,7 @@ import { useHttp } from "../../hooks/useHttp";
 
 const initialState = {
   manzil: null,
-  muammo_turi: {
-    id: 3,
-    name: "Issiq suv yo'q",
-  },
+  muammo_turi: null,
   description: "",
   images: [],
   activeRegion: "",

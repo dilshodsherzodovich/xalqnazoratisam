@@ -143,7 +143,7 @@ function LocationForm() {
         <div className="flex">
           <PrimaryBtn
             disabled={!manzil || !muammo_turi.id || !description}
-            text={createLoading ? "Yuklanmoqda..." : `Xabar yuborish`}
+            text={createLoading ? "Yuborilmoqda..." : `Xabar yuborish`}
             className="inline"
             type="button"
             onClick={() => {

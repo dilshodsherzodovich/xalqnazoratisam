@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLocation } from "../../../../redux/slices/problemCreate.slice";
 import { useState } from "react";
 
-ymaps.ready();
+// ymaps.ready();
 
 const YandexMap = () => {
   const { location } = useSelector((state) => state.problemCreate);
@@ -18,62 +18,62 @@ const YandexMap = () => {
   const handleMapClick = async (e) => {
     const coords = e.get("coords"); // Get the clicked coordinates
     dispatch(setLocation(coords));
-    try {
-      console.log(coords);
-      const response = await ymaps.geocode(coords);
-      const firstGeoObject = response.geoObjects.get(0);
-      console.log(firstGeoObject);
+    // try {
+    //   console.log(coords);
+    //   const response = await ymaps.geocode(coords);
+    //   const firstGeoObject = response.geoObjects.get(0);
+    //   console.log(firstGeoObject);
 
-      const address = firstGeoObject.getAddressLine();
-      console.log(address);
+    //   const address = firstGeoObject.getAddressLine();
+    //   console.log(address);
 
-      // Update the state with the clicked location data
-    } catch (error) {
-      console.error("Error geocoding:", error);
-    }
+    //   // Update the state with the clicked location data
+    // } catch (error) {
+    //   console.error("Error geocoding:", error);
+    // }
   };
 
-  const handleSearch = async () => {
-    try {
-      const response = await ymaps.geocode(searchQuery);
+  // const handleSearch = async () => {
+  //   try {
+  //     const response = await ymaps.geocode(searchQuery);
 
-      // Extract the search results from the response
-      const results = response.geoObjects.toArray();
+  //     // Extract the search results from the response
+  //     const results = response.geoObjects.toArray();
 
-      if (results.length > 0) {
-        // Get the coordinates of the first result
-        const newCenter = results[0].geometry.getCoordinates();
-        console.log(newCenter);
+  //     if (results.length > 0) {
+  //       // Get the coordinates of the first result
+  //       const newCenter = results[0].geometry.getCoordinates();
+  //       console.log(newCenter);
 
-        // Update the map center with the new coordinates
-        setMapCenter(newCenter);
-      }
+  //       // Update the map center with the new coordinates
+  //       setMapCenter(newCenter);
+  //     }
 
-      // Map the results to extract relevant information
-      const searchResultsData = results.map((result) => ({
-        name: result.getAddressLine(),
-        geometry: result.geometry.getCoordinates(),
-      }));
+  //     // Map the results to extract relevant information
+  //     const searchResultsData = results.map((result) => ({
+  //       name: result.getAddressLine(),
+  //       geometry: result.geometry.getCoordinates(),
+  //     }));
 
-      // Update the state with the search results
-      setSearchResults(searchResultsData);
-    } catch (error) {
-      console.error("Error searching for locations:", error);
-    }
-  };
+  //     // Update the state with the search results
+  //     setSearchResults(searchResultsData);
+  //   } catch (error) {
+  //     console.error("Error searching for locations:", error);
+  //   }
+  // };
 
-  const handleSearchInputChange = (value) => {
-    setSearchQuery(value);
-  };
+  // const handleSearchInputChange = (value) => {
+  //   setSearchQuery(value);
+  // };
 
   console.log(mapCenter);
 
   return (
     <>
       <YMaps
-        query={{
-          apikey: "26697c51-3c19-4db6-9ce9-1b01015001c9",
-        }}
+      // query={{
+      //   apikey: "26697c51-3c19-4db6-9ce9-1b01015001c9",
+      // }}
       >
         <Map
           defaultState={{
@@ -90,7 +90,7 @@ const YandexMap = () => {
             />
           )}
 
-          {searchResults.map((result, index) => (
+          {/* {searchResults.map((result, index) => (
             <Placemark
               key={index}
               geometry={result.geometry}
@@ -99,10 +99,10 @@ const YandexMap = () => {
                 balloonContent: result.name,
               }}
             />
-          ))}
+          ))} */}
         </Map>
       </YMaps>
-      <input
+      {/* <input
         type="text"
         placeholder="Search for a location..."
         value={searchQuery}
@@ -115,7 +115,7 @@ const YandexMap = () => {
         onClick={handleSearch}
       >
         Search
-      </div>
+      </div> */}
     </>
   );
 };

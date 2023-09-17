@@ -2,6 +2,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from "reselect";
 import { gotToStep } from "../../../../redux/slices/reportStatus.slice";
 import { setProblem } from "../../../../redux/slices/selectedProblem.slice";
+import { useCookies } from "react-cookie";
+import { setIsAuthOpen } from "../../../../redux/slices/modals.slice";
 
 function ProblemTypes() {
   const selectedProblems = createSelector(
@@ -13,10 +15,15 @@ function ProblemTypes() {
       )[0].problems;
     }
   );
+  const [cookies] = useCookies(["access"]);
   const problems = useSelector(selectedProblems);
   const dispatch = useDispatch();
 
   const handleProblemClick = (index, problem) => {
+    if (!cookies.access) {
+      dispatch(setIsAuthOpen(true));
+      return;
+    }
     dispatch(gotToStep(index));
     dispatch(setProblem(problem));
   };

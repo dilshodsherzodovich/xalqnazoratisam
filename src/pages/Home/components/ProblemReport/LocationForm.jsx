@@ -10,13 +10,19 @@ import {
   createProblem,
   setActiveRegion,
   setManzil,
+  clearRes,
 } from "../../../../redux/slices/problemCreate.slice";
+import { gotToStep } from "../../../../redux/slices/reportStatus.slice";
 import { createSelector } from "reselect";
+import { useCookies } from "react-cookie";
+import { toast } from "react-toastify";
+import { setIsAuthOpen } from "../../../../redux/slices/modals.slice";
 
 function LocationForm() {
   const formRef = useRef();
+  const [cookies, setCookie, removeCookie] = useCookies(["access", "refresh"]);
   const { mahallas, loading } = useSelector((state) => state.regions);
-  const { activeRegion, manzil, location, description, muammo_turi } =
+  const { activeRegion, manzil, location, description, muammo_turi, res } =
     useSelector((state) => state.problemCreate);
   const { images } = useSelector((state) => state.problemImages);
 
@@ -37,6 +43,26 @@ function LocationForm() {
     //eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    if (res.id) {
+      toast.success("Arizangiz muvaffaqqiyatli jo'natildi", {
+        position: "top-center",
+        theme: "colored",
+      });
+      dispatch(clearRes());
+      dispatch(gotToStep(0));
+    } else if (res.error) {
+      if (res.error.code === "token_not_valid") {
+        removeCookie("access", { path: "/" });
+        removeCookie("refresh", { path: "/" });
+        dispatch(setIsAuthOpen(true));
+      }
+      dispatch(clearRes());
+    }
+
+    //eslint-disable-next-line
+  }, [res]);
+
   const handleProblemSubmit = () => {
     if (!manzil || !muammo_turi.id || !description) return;
     const home = new FormData(formRef.current).get("uy");
@@ -51,8 +77,7 @@ function LocationForm() {
         formData.append("images", item.file);
       });
     }
-
-    dispatch(createProblem(formData));
+    dispatch(createProblem({ data: formData, token: cookies.access }));
   };
 
   return (

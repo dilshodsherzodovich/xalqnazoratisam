@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import TelMask from "../../../components/TelMask";
 import PrimaryBtn from "@components/PrimaryBtn";
 import { useDispatch, useSelector } from "react-redux";
-import { loginUser } from "../../../redux/slices/authLogin.slice";
+import { clearRes, loginUser } from "../../../redux/slices/authLogin.slice";
 import { useCookies } from "react-cookie";
 
 function AuthForm({ closeModal }) {
@@ -12,7 +12,7 @@ function AuthForm({ closeModal }) {
   const [password, setPassword] = useState("");
   const { userRes, loading } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  const [cookies, setCookie] = useCookies([]);
+  const [cookies, setCookie] = useCookies(["access", "refresh"]);
 
   const handleSubmit = (e) => {
     const formData = new FormData(e.target);
@@ -37,6 +37,7 @@ function AuthForm({ closeModal }) {
         maxAge: 50 * 365 * 24 * 60 * 60,
       });
       closeModal();
+      dispatch(clearRes());
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userRes]);

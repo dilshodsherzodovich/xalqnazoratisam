@@ -17,7 +17,7 @@ const initialState = {
 
 export const createProblem = createAsyncThunk(
   "problemCreate/createProblem",
-  async (data) => {
+  async ({ data, token }) => {
     const { request } = useHttp();
     return await request({
       method: "post",
@@ -25,8 +25,7 @@ export const createProblem = createAsyncThunk(
       url: "/muammolar/createproblem/",
       headers: {
         "Content-Type": "multipart/form-data",
-        Authorization:
-          "Token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjk0ODY0MTA1LCJpYXQiOjE2OTQ4NjM4MDUsImp0aSI6IjcxNjA4MmZjZDdhMjRmY2I4ZjQ3MWE2MmMyNzQ1MmVlIiwidXNlcl9pZCI6MX0.Gve-9h7iguAW6dqXW722Su-Mx9_JsNXYF5C_t8zIRFA",
+        Authorization: `Bearer ${token}`,
       },
     });
   }
@@ -54,17 +53,20 @@ const problemCreateSlice = createSlice({
     setLocation: (state, action) => {
       state.location = action.payload;
     },
+    clearRes: (state) => {
+      state.res = {};
+    },
   },
   extraReducers: (builder) => {
     builder
-      .addCase(createProblem.pending, (state, action) => {
+      .addCase(createProblem.pending, (state) => {
         state.loading = true;
       })
       .addCase(createProblem.fulfilled, (state, action) => {
         state.res = action.payload;
         state.loading = false;
       })
-      .addCase(createProblem.rejected, (state, action) => {
+      .addCase(createProblem.rejected, (state) => {
         state.res = { error: "Xatoli yuz berdi" };
       });
   },
@@ -78,4 +80,5 @@ export const {
   setProblemType,
   setActiveRegion,
   setLocation,
+  clearRes,
 } = problemCreateSlice.actions;

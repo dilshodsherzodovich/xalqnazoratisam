@@ -16,18 +16,13 @@ export const useHttp = () => {
         headers,
       })
         .then((res) => {
-          console.log(res);
-          if (res.statusText !== "OK") {
-            return {
-              error:
-                "Ma'lumotlarni olib kelishda xatolik yuz berdi, iltimos sahifani yangilang",
-            };
-          }
           return res.data;
         })
         .catch((error) => {
           handleHttpError(error);
-          return {};
+          return error?.response?.data?.detail
+            ? { error: error.response.data }
+            : {};
         });
     } catch (error) {
       console.log(error);

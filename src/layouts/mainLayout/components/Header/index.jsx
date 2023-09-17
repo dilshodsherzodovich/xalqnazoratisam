@@ -14,6 +14,7 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isAuthOpen } = useSelector((state) => state.modals);
   const [cookies, setCookie, removeCookie] = useCookies(["access"]);
+
   const dispatch = useDispatch();
 
   useEffect(() => {

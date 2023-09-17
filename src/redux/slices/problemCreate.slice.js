@@ -12,7 +12,7 @@ const initialState = {
   activeRegion: "",
   location: null,
   res: {},
-  loading: false,
+  createLoading: false,
 };
 
 export const createProblem = createAsyncThunk(
@@ -60,11 +60,11 @@ const problemCreateSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(createProblem.pending, (state) => {
-        state.loading = true;
+        state.createLoading = true;
       })
       .addCase(createProblem.fulfilled, (state, action) => {
         state.res = action.payload;
-        state.loading = false;
+        state.createLoading = false;
       })
       .addCase(createProblem.rejected, (state) => {
         state.res = { error: "Xatoli yuz berdi" };

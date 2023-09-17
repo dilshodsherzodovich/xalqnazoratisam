@@ -22,8 +22,15 @@ function LocationForm() {
   const formRef = useRef();
   const [cookies, setCookie, removeCookie] = useCookies(["access", "refresh"]);
   const { mahallas, loading } = useSelector((state) => state.regions);
-  const { activeRegion, manzil, location, description, muammo_turi, res } =
-    useSelector((state) => state.problemCreate);
+  const {
+    activeRegion,
+    manzil,
+    location,
+    description,
+    muammo_turi,
+    res,
+    createLoading,
+  } = useSelector((state) => state.problemCreate);
   const { images } = useSelector((state) => state.problemImages);
 
   const selectedMahallas = createSelector(
@@ -136,7 +143,7 @@ function LocationForm() {
         <div className="flex">
           <PrimaryBtn
             disabled={!manzil || !muammo_turi.id || !description}
-            text="Xabar yuborish"
+            text={createLoading ? "Yuklanmoqda..." : `Xabar yuborish`}
             className="inline"
             type="button"
             onClick={() => {

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@400;700&display=swap");
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -136,4 +137,13 @@ input:-webkit-autofill:active {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* font-families */
+@font-face {
+  font-family: "manrope";
+  src: url("./fonts/Manrope/Manrope-VariableFont_wght.ttf");
+  src: url("./fonts/Manrope/static/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }

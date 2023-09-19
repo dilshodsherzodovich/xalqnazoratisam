@@ -9,6 +9,7 @@ const Router = () => {
 
   //import project pages
   const Home = lazy(() => import("@pages/Home"));
+  const News = lazy(() => import("@pages/News"));
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -18,7 +19,16 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/yangiliklar" element={<News />} />
         </Route>
+        <Route
+          path="*"
+          element={
+            <div>
+              <p>404</p>
+            </div>
+          }
+        />
       </Routes>
     </Suspense>
   );

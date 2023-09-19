@@ -16,7 +16,7 @@ function Navbar() {
     },
     {
       name: "Yangiliklar",
-      route: "/#news",
+      route: "/yangiliklar",
     },
   ];
 

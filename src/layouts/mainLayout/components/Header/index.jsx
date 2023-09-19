@@ -9,11 +9,13 @@ import PrimaryBtn from "@components/PrimaryBtn";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsAuthOpen } from "../../../../redux/slices/modals.slice";
 import { useCookies } from "react-cookie";
+import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const { isAuthOpen } = useSelector((state) => state.modals);
   const [cookies, setCookie, removeCookie] = useCookies(["access"]);
+  const { pathname } = useLocation();
 
   const dispatch = useDispatch();
 
@@ -38,7 +40,11 @@ function Header() {
   };
 
   return (
-    <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+    <header
+      className={`header ${
+        pathname === "/" ? "absolute py-[50px]" : "py-[15px]"
+      }  ${isScrolled ? "scrolled" : ""}`}
+    >
       <Container>
         <div className="flex justify-between items-center">
           <Logo />

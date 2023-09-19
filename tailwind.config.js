@@ -57,6 +57,10 @@ export default {
         blueLink: "#5956e9",
         borderColor: "#b2b7d040",
         grayBg: "#f8f9fa",
+        overflowColor: "#051A5380",
+      },
+      fontFamily: {
+        manrope: ["manrope"],
       },
     },
   },

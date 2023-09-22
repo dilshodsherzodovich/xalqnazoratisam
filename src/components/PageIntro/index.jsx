@@ -5,10 +5,12 @@ function PageIntro({ pageTitle = "", pageImage = "" }) {
 
   const renderPathname = (pathname) => {
     return (
-      <div className="paths flex gap-2 items-center justify-center text-[14px] text-secondary fon-[500]">
-        <Link className="hover:text-primary" to={"/"}></Link>
+      <div className="paths flex gap-2 items-center justify-center text-[14px] text-white fon-[500]">
+        <Link className="hover:text-primary" to={"/"}>
+          Bosh sahifa
+        </Link>
         <i className="fa-solid fa-angle-right"></i>
-        <p className="capitalize">{pathname.slice(0, 1)}</p>
+        <p className="capitalize">{pathname.slice(1)}</p>
       </div>
     );
   };
@@ -23,11 +25,11 @@ function PageIntro({ pageTitle = "", pageImage = "" }) {
       }}
       className="w-full h-[25rem]"
     >
-      <div className="overlay bg-overflowColor w-full h-full flex items-center justify-center">
+      <div className="overlay bg-overflowColor w-full h-full flex flex-col items-center justify-center font-mono">
+        {renderPathname(pathname)}
         <p className="text-center text-white text-[30px] font-mono">
           {pageTitle}
         </p>
-        {renderPathname(pathname)}
       </div>
     </div>
   );

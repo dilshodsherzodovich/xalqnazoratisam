@@ -1,0 +1,32 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "Muammolar",
+      "description": "Hozirgi kunda hal qilingan muammolar soni 10mingdan ortib ketdi.",
+      "file": "https://layerdrops.com/govity/main-html/assets/images/blog/news-sidebar-img-1.jpg",
+      "sana": "2023-09-17T17:10:56.459250"
+    },
+    {
+      "id": 1,
+      "title": "Muammolar",
+      "description": "Hozirgi kunda hal qilingan muammolar soni 10mingdan ortib ketdi.",
+      "file": "https://layerdrops.com/govity/main-html/assets/images/blog/news-sidebar-img-1.jpg",
+      "sana": "2023-09-17T17:10:56.459250"
+    },
+    {
+      "id": 1,
+      "title": "Muammolar",
+      "description": "Hozirgi kunda hal qilingan muammolar soni 10mingdan ortib ketdi.",
+      "file": "https://layerdrops.com/govity/main-html/assets/images/blog/news-sidebar-img-1.jpg",
+      "sana": "2023-09-17T17:10:56.459250"
+    }
+  ],
+  "categories": [
+    "Barcha yangiliklar",
+    "Muammolar",
+    "Madaniyat",
+    "Uchrashivlar",
+    "E'lonlar"
+  ]
+}

@@ -8,6 +8,8 @@ import problemCreate from "./slices/problemCreate.slice";
 import regions from "./slices/regions.slice";
 import modals from "./slices/modals.slice";
 import auth from "./slices/authLogin.slice";
+import news from "./slices/newsList.slice";
+import newsCategories from "./slices/newsCategories.slice";
 
 /* eslint-disable  no-undef */
 
@@ -22,6 +24,8 @@ export const store = configureStore({
     regions,
     modals,
     auth,
+    news,
+    newsCategories,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
   devTools: process.env.NODE_ENV !== "production",

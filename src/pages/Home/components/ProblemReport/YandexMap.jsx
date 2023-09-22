@@ -66,8 +66,6 @@ const YandexMap = () => {
   //   setSearchQuery(value);
   // };
 
-  console.log(mapCenter);
-
   return (
     <>
       <YMaps

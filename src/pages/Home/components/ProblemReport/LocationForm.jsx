@@ -17,6 +17,7 @@ import { createSelector } from "reselect";
 import { useCookies } from "react-cookie";
 import { toast } from "react-toastify";
 import { setIsAuthOpen } from "../../../../redux/slices/modals.slice";
+import YandexMapsDemo from "./YandexMapsDemo";
 
 function LocationForm() {
   const formRef = useRef();
@@ -138,7 +139,8 @@ function LocationForm() {
           placeHolder="Uy manzilingizni kiriting"
         />
         <div className="map-container mb-4 rounded-xl overflow-hidden">
-          <YandexMap />
+          {/* <YandexMap /> */}
+          <YandexMapsDemo />
         </div>
         <div className="flex">
           <PrimaryBtn

@@ -24,7 +24,7 @@ function PageIntro({ pageTitle = "", pageImage = "" }) {
       className="w-full h-[25rem]"
     >
       <div className="overlay bg-overflowColor w-full h-full flex items-center justify-center">
-        <p className="text-center text-white text-[30px] font-manrope">
+        <p className="text-center text-white text-[30px] font-mono">
           {pageTitle}
         </p>
         {renderPathname(pathname)}
